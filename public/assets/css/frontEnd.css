@@ -1,0 +1,70 @@
+#tombol {
+  background-color: #190482;
+  -webkit-transition: background-color 800mss linear;
+  -moz-transition: background-color 800ms linear;
+  -o-transition: background-color 800ms linear;
+  -ms-transition: background-color 8000ms linear;
+  transition: background-color 800ms linear, width 1000ms;
+}
+#tombol:hover {
+  background-color: #87c4ff;
+  width: 100px;
+  text-align: center;
+}
+
+.searchbar {
+  margin-right: 200px;
+  height: 60px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.search_input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 450px;
+  padding: 0 10px;
+  caret-color: transparent;
+  line-height: 40px;
+  caret-color: red;
+}
+
+.search_icon {
+  color: #190482;
+  background: white;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  float: right;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.keranjang-title {
+  float: center;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 30px;
+  background: linear-gradient(to bottom, #007bff, #00bfff);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+#tombol_checkout {
+  width: 100px;
+  background-color: #190482;
+  -webkit-transition: background-color 800mss linear;
+  -moz-transition: background-color 800ms linear;
+  -o-transition: background-color 800ms linear;
+  -ms-transition: background-color 8000ms linear;
+  transition: background-color 800ms linear, width 1000ms;
+}
+#tombol_checkout:hover {
+  background-color: #87c4ff;
+  width: 150px;
+  text-align: center;
+}

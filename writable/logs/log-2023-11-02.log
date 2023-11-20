@@ -1,0 +1,226 @@
+ERROR - 2023-11-02 01:05:18 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\commerce\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\commerce\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'commerce', 3306, '', 0)
+#1 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\commerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\commerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\commerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\commerce\app\Controllers\Produk.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\commerce\system\CodeIgniter.php(942): App\Controllers\produk->Home()
+#8 C:\xampp\htdocs\commerce\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\produk))
+#9 C:\xampp\htdocs\commerce\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\commerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\commerce\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\commerce\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\commerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\commerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\commerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\commerce\app\Controllers\Produk.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\commerce\system\CodeIgniter.php(942): App\Controllers\produk->Home()
+#7 C:\xampp\htdocs\commerce\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\produk))
+#8 C:\xampp\htdocs\commerce\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\commerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\commerce\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-02 01:05:18 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Produk.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\produk->Home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\produk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-02 01:05:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 01:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 01:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 02:06:32 --> Undefined variable: dataSama
+in APPPATH\Controllers\Produk.php on line 91.
+ 1 APPPATH\Controllers\Produk.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataSama', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Produk.php', 91, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\produk->update('18')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\produk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-02 02:37:38 --> Undefined variable: gambarBaru
+in APPPATH\Controllers\Produk.php on line 97.
+ 1 APPPATH\Controllers\Produk.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: gambarBaru', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Produk.php', 97, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\produk->update('18')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\produk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-02 02:37:51 --> Undefined variable: gambarBaru
+in APPPATH\Controllers\Produk.php on line 97.
+ 1 APPPATH\Controllers\Produk.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: gambarBaru', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Produk.php', 97, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\produk->update('18')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\produk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-02 02:39:05 --> Undefined variable: gambarLama
+in APPPATH\Controllers\Produk.php on line 97.
+ 1 APPPATH\Controllers\Produk.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: gambarLama', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Produk.php', 97, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\produk->update('18')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\produk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-02 02:44:50 --> syntax error, unexpected ')'
+in APPPATH\Controllers\Produk.php on line 91.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Produk.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Produk')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Produk')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Produk')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Produk', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-02 02:49:38 --> syntax error, unexpected '}', expecting ';' or ','
+in APPPATH\Controllers\Produk.php on line 97.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Produk.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Produk')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Produk')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Produk')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Produk', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-02 03:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:24:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:37:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 03:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 04:03:23 --> Invalid file: "Layout/master.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Layout/master.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Layout/master', [], true)
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Produk', [], true)
+ 4 APPPATH\Controllers\Produk.php(18): view('BackOffice/page/Produk', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\produk->Home()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\produk))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-02 04:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 04:04:28 --> Invalid file: "Layout/navbar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Layout/navbar.php')
+ 2 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Layout/navbar', null, true)
+ 3 APPPATH\Views\BackOffice\Layout\master.php(25): CodeIgniter\View\View->include('Layout/navbar')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\Layout\\master.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('BackOffice/Layout/master', [], true)
+ 7 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Produk', [], true)
+ 8 APPPATH\Controllers\Produk.php(18): view('BackOffice/page/Produk', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\produk->Home()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\produk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-02 04:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 04:04:30 --> Invalid file: "Layout/navbar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Layout/navbar.php')
+ 2 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Layout/navbar', null, true)
+ 3 APPPATH\Views\BackOffice\Layout\master.php(25): CodeIgniter\View\View->include('Layout/navbar')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\Layout\\master.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('BackOffice/Layout/master', [], true)
+ 7 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Produk', [], true)
+ 8 APPPATH\Controllers\Produk.php(18): view('BackOffice/page/Produk', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\produk->Home()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\produk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-02 04:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 04:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 06:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-02 06:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 06:33:22 --> Undefined variable: title
+in APPPATH\Views\BackOffice\Layout\master.php on line 7.
+ 1 APPPATH\Views\BackOffice\Layout\master.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\Layout\\master.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\Layout\\master.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('BackOffice/Layout/master', [], true)
+ 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/home', [], true)
+ 6 APPPATH\Controllers\FrontEnd.php(10): view('frontEnd/page/home')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FrontEnd->home()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontEnd))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-02 06:34:06 --> Undefined variable: title
+in APPPATH\Views\BackOffice\Layout\master.php on line 7.
+ 1 APPPATH\Views\BackOffice\Layout\master.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\Layout\\master.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\Layout\\master.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('BackOffice/Layout/master', [], true)
+ 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/home', [], true)
+ 6 APPPATH\Controllers\FrontEnd.php(10): view('frontEnd/page/home')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FrontEnd->home()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontEnd))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-02 06:34:32 --> Undefined variable: title
+in APPPATH\Views\BackOffice\Layout\master.php on line 7.
+ 1 APPPATH\Views\BackOffice\Layout\master.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\Layout\\master.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\Layout\\master.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('BackOffice/Layout/master', [], true)
+ 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/home', [], true)
+ 6 APPPATH\Controllers\FrontEnd.php(10): view('frontEnd/page/home')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FrontEnd->home()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontEnd))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-02 06:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-02 06:34:47 --> Undefined variable: title
+in APPPATH\Views\BackOffice\Layout\master.php on line 7.
+ 1 APPPATH\Views\BackOffice\Layout\master.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\Layout\\master.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\Layout\\master.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('BackOffice/Layout/master', [], true)
+ 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/home', [], true)
+ 6 APPPATH\Controllers\FrontEnd.php(10): view('frontEnd/page/home')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FrontEnd->home()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontEnd))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-02 08:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

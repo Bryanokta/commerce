@@ -1,0 +1,171 @@
+ERROR - 2023-11-20 01:24:03 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\commerce\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\commerce\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'commerce', 3306, '', 0)
+#1 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\commerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\commerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\commerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\commerce\app\Controllers\FrontEnd.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\commerce\system\CodeIgniter.php(942): App\Controllers\FrontEnd->home()
+#8 C:\xampp\htdocs\commerce\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontEnd))
+#9 C:\xampp\htdocs\commerce\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\commerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\commerce\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\commerce\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\commerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\commerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\commerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\commerce\app\Controllers\FrontEnd.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\commerce\system\CodeIgniter.php(942): App\Controllers\FrontEnd->home()
+#7 C:\xampp\htdocs\commerce\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontEnd))
+#8 C:\xampp\htdocs\commerce\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\commerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\commerce\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-20 01:24:03 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\FrontEnd.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FrontEnd->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontEnd))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-20 01:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 01:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 01:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 01:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 01:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 02:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 03:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 04:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 04:15:51 --> Undefined variable: sub_total
+in APPPATH\Views\FrontEnd\page\checkout.php on line 50.
+ 1 APPPATH\Views\FrontEnd\page\checkout.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sub_total', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\checkout.php', 50, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/checkout', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(129): view('frontEnd/page/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Keranjang->Checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-20 04:17:35 --> Undefined variable: sub_total
+in APPPATH\Views\FrontEnd\page\checkout.php on line 50.
+ 1 APPPATH\Views\FrontEnd\page\checkout.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sub_total', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\checkout.php', 50, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/checkout', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(130): view('frontEnd/page/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Keranjang->Checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-20 06:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 06:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 06:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 06:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 07:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 08:55:58 --> Undefined variable: items
+in APPPATH\Views\FrontEnd\page\precheckout.php on line 37.
+ 1 APPPATH\Views\FrontEnd\page\precheckout.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: items', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\precheckout.php', 37, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\precheckout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/precheckout', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(144): view('frontEnd/page/precheckout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Keranjang->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-20 08:59:50 --> Undefined variable: sub_total
+in APPPATH\Views\FrontEnd\page\checkout.php on line 52.
+ 1 APPPATH\Views\FrontEnd\page\checkout.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sub_total', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\checkout.php', 52, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/checkout', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(148): view('frontEnd/page/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Keranjang->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-20 09:01:19 --> Undefined variable: sub_total
+in APPPATH\Views\FrontEnd\page\checkout.php on line 52.
+ 1 APPPATH\Views\FrontEnd\page\checkout.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sub_total', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\checkout.php', 52, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/checkout', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(148): view('frontEnd/page/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Keranjang->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-20 09:02:11 --> Undefined index: sub_total
+in APPPATH\Views\FrontEnd\page\precheckout.php on line 42.
+ 1 APPPATH\Views\FrontEnd\page\precheckout.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sub_total', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\precheckout.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\precheckout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/precheckout', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(129): view('frontEnd/page/precheckout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Keranjang->precheckout()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-20 09:06:36 --> Undefined index: sub_total
+in APPPATH\Views\FrontEnd\page\precheckout.php on line 42.
+ 1 APPPATH\Views\FrontEnd\page\precheckout.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sub_total', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\precheckout.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\precheckout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/precheckout', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(128): view('frontEnd/page/precheckout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Keranjang->precheckout()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-20 09:07:15 --> Undefined index: sub_total
+in APPPATH\Views\FrontEnd\page\precheckout.php on line 43.
+ 1 APPPATH\Views\FrontEnd\page\precheckout.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sub_total', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\precheckout.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\precheckout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/precheckout', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(128): view('frontEnd/page/precheckout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Keranjang->precheckout()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-20 09:08:04 --> Undefined variable: sub_total
+in APPPATH\Views\FrontEnd\page\checkout.php on line 52.
+ 1 APPPATH\Views\FrontEnd\page\checkout.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sub_total', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\checkout.php', 52, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\FrontEnd\\page\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('frontEnd/page/checkout', [], true)
+ 5 APPPATH\Controllers\Keranjang.php(147): view('frontEnd/page/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Keranjang->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Keranjang))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-20 09:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 09:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 09:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
