@@ -7,6 +7,6 @@ use CodeIgniter\Model;
 class BuyersModel extends Model
 {
     protected $table = 'buyers';
-    protected $primaryKey = 'user_id';
+    protected $primaryKey = 'order_id';
     protected $allowedFields = ['nama_depan', 'nama_belakang', 'email', 'no_telephone', 'address', 'token', 'order_id', 'sub_total'];
 }

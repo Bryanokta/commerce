@@ -55,7 +55,7 @@
             </div>
             <!-- icon cart -->
             <div class="d-flex justify-content-between align-items-center">
-                <a href="/produk/keranjang" class="btn position-relative" style="background-color: #ffffff;">
+                <a href="/keranjang" class="btn position-relative" style="background-color: #ffffff;">
                     <i class="fa-solid fa-cart-shopping" style="color: #190482;"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         99+

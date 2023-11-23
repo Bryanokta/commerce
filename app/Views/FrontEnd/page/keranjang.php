@@ -99,7 +99,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="row g-3" action="/produk/precheckout" method="post">
+                    <form class="row g-3" action="/produk/checkout" method="post">
 
                         <input type="hidden" name="sub_total" value="<?= $sub_total; ?>">
                         <!-- form input data diri customer -->

@@ -43,7 +43,6 @@ class FrontEnd extends BaseController
     }
     public function getProdukById()
     {
-
         $idPost = $this->request->getPost('id');
         $produkModel = new ProdukModel();
         echo json_encode($produkModel->find($idPost));
@@ -60,18 +59,18 @@ class FrontEnd extends BaseController
         //method menjumlah harga produk dan jumlah produk
         $jumlah_pesanan = $this->request->getPost('jumlah');
         $hargaTotal = $hargaProdukById * $jumlah_pesanan;
-        $hasilRupiah = "Rp " . number_format($hargaTotal, 2, ',', '.');
 
         //method keranjang
         $keranjangModel = new keranjangModel();
-        $keranjangModel->save([
+        $data = [
             'id_pesanan' => rand(),
             'nama_pesanan' => $this->request->getPost('nama_produk'),
             'jumlah_pesanan' => $jumlah_pesanan,
             'gambar_pesanan' => $this->request->getPost('gambar_produk'),
             'total_harga' => $hargaTotal,
             'harga_produk' => $hargaProdukById
-        ]);
+        ];
+        $keranjangModel->insert($data);
         session()->setFlashdata('pesan', '' . $namaProdukById . ' Telah Berhasil Ditambahkan Ke keranjang');
 
         return redirect()->to(base_url('/'));

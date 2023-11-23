@@ -1,0 +1,389 @@
+INFO - 2023-11-22 00:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 00:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 01:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 01:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 01:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 01:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 01:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 01:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 01:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 01:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-22 02:39:42 --> Array to string conversion
+in APPPATH\Controllers\Pemesanan.php on line 15.
+ 1 APPPATH\Controllers\Pemesanan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 15, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+ERROR - 2023-11-22 02:47:56 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\commerce\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\commerce\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'commerce', 3306, '', 0)
+#1 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\commerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\commerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\commerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\commerce\app\Controllers\Checkout.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\commerce\system\CodeIgniter.php(942): App\Controllers\Checkout->checkout()
+#8 C:\xampp\htdocs\commerce\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#9 C:\xampp\htdocs\commerce\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\commerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\commerce\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\commerce\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\commerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\commerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\commerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\commerce\app\Controllers\Checkout.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\commerce\system\CodeIgniter.php(942): App\Controllers\Checkout->checkout()
+#7 C:\xampp\htdocs\commerce\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+#8 C:\xampp\htdocs\commerce\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\commerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\commerce\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-22 02:47:56 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `keranjang`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Checkout.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Checkout->checkout()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Checkout))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 02:55:01 --> Array to string conversion
+in APPPATH\Controllers\Pemesanan.php on line 15.
+ 1 APPPATH\Controllers\Pemesanan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 15, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 02:58:14 --> Trying to access array offset on value of type int
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(33): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 03:05:16 --> Trying to access array offset on value of type null
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(36): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 03:07:49 --> Undefined index: status_code
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status_code', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(36): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 03:22:48 --> Undefined index: fraud_status
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: fraud_status', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(37): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 03:25:36 --> Undefined index: fraud_status
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: fraud_status', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(37): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 03:32:47 --> implode(): Invalid arguments passed
+in APPPATH\Controllers\Pemesanan.php on line 15.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'implode(): Invalid arguments passed', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 15, [...])
+ 2 APPPATH\Controllers\Pemesanan.php(15): implode(',', null)
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-22 03:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-22 04:10:43 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+in APPPATH\Controllers\Pemesanan.php on line 43.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pemesanan')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pemesanan')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Pemesanan')
+ 5 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Pemesanan', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 04:14:57 --> Undefined variable: result
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: result', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(68): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 04:15:55 --> Undefined index: fraud_status
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: fraud_status', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(68): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 04:16:06 --> Undefined index: status
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(68): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 04:19:07 --> Undefined variable: results
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: results', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(37): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-22 06:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-22 06:15:58 --> Undefined index: fraud_status
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: fraud_status', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(37): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 06:16:17 --> Undefined index: fraud_status
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: fraud_status', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(37): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 06:39:21 --> Illegal string offset 'order_id'
+in APPPATH\Controllers\Pemesanan.php on line 16.
+ 1 APPPATH\Controllers\Pemesanan.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'order_id\'', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 16, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 06:45:42 --> Invalid argument supplied for foreach()
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 18.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(53): view('BackOffice/page/Pemesanan', [...])
+ 6 APPPATH\Controllers\Pemesanan.php(16): App\Controllers\pemesanan->prosesOrder('2075497445')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 06:47:11 --> Undefined index: status_code
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status_code', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(55): view('BackOffice/page/Pemesanan', [...])
+ 6 APPPATH\Controllers\Pemesanan.php(16): App\Controllers\pemesanan->prosesOrder('2075497445')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 06:54:45 --> implode(): Invalid arguments passed
+in APPPATH\Controllers\Pemesanan.php on line 17.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'implode(): Invalid arguments passed', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 17, [...])
+ 2 APPPATH\Controllers\Pemesanan.php(17): implode(',', '2075497445')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-22 06:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-22 06:58:49 --> Array to string conversion
+in APPPATH\Controllers\Pemesanan.php on line 17.
+ 1 APPPATH\Controllers\Pemesanan.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 17, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 06:59:47 --> implode(): Invalid arguments passed
+in APPPATH\Controllers\Pemesanan.php on line 17.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'implode(): Invalid arguments passed', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 17, [...])
+ 2 APPPATH\Controllers\Pemesanan.php(17): implode(',', null)
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-22 07:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-22 07:20:09 --> Array to string conversion
+in APPPATH\Controllers\Pemesanan.php on line 18.
+ 1 APPPATH\Controllers\Pemesanan.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 18, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 07:20:34 --> Array to string conversion
+in APPPATH\Controllers\Pemesanan.php on line 18.
+ 1 APPPATH\Controllers\Pemesanan.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 18, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 07:30:03 --> Object of class App\Models\BuyersModel could not be converted to string
+in APPPATH\Controllers\Pemesanan.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 07:30:35 --> Object of class App\Models\BuyersModel could not be converted to string
+in APPPATH\Controllers\Pemesanan.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 07:32:50 --> Trying to get property 'order_id' of non-object
+in APPPATH\Controllers\Pemesanan.php on line 15.
+ 1 APPPATH\Controllers\Pemesanan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'order_id\' of non-object', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 15, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 07:33:56 --> Call to a member function select() on array
+in APPPATH\Controllers\Pemesanan.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 07:35:07 --> Function name must be a string
+in APPPATH\Controllers\Pemesanan.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 07:36:26 --> Undefined index: order_id
+in APPPATH\Controllers\Pemesanan.php on line 14.
+ 1 APPPATH\Controllers\Pemesanan.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: order_id', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 14, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-22 07:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 07:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 08:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 08:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-22 08:08:16 --> Array to string conversion
+in APPPATH\Controllers\Pemesanan.php on line 22.
+ 1 APPPATH\Controllers\Pemesanan.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 22, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-22 08:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-22 08:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-22 08:38:14 --> explode() expects parameter 2 to be string, array given
+in APPPATH\Controllers\Pemesanan.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expects parameter 2 to be string, array given', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 19, [...])
+ 2 APPPATH\Controllers\Pemesanan.php(19): explode(' ', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 08:38:27 --> explode() expects parameter 2 to be string, array given
+in APPPATH\Controllers\Pemesanan.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expects parameter 2 to be string, array given', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 19, [...])
+ 2 APPPATH\Controllers\Pemesanan.php(19): explode(' ', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-22 08:54:50 --> Array to string conversion
+in APPPATH\Controllers\Pemesanan.php on line 21.
+ 1 APPPATH\Controllers\Pemesanan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')

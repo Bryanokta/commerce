@@ -10,7 +10,7 @@ $routes->get('/', 'FrontEnd::home');
 $routes->get('/produk/home', 'Produk::home');
 $routes->get('/produk/pemesanan', 'Pemesanan::home');
 $routes->get('/produk/tambah', 'Produk::tambah');
-$routes->get('/produk/keranjang', 'Keranjang::home');
+$routes->get('/keranjang', 'Keranjang::home');
 //proses
 $routes->post('/produk/save', 'Produk::save');
 $routes->delete('/keranjang/hapus/(:num)', 'Keranjang::hapus/$1');
@@ -21,5 +21,4 @@ $routes->post('/frontend/byid', 'FrontEnd::getProdukById');
 $routes->post('/keranjang/edit', 'Keranjang::edit');
 $routes->post('/keranjang/update', 'Keranjang::update');
 $routes->post('/produk/keranjang', 'FrontEnd::keranjang');
-$routes->post('/produk/precheckout', 'Keranjang::precheckout');
-$routes->post('/produk/checkout', 'Keranjang::checkout');
+$routes->post('/produk/checkout', 'Checkout::checkout');

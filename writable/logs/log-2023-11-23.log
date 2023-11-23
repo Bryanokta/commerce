@@ -1,0 +1,137 @@
+ERROR - 2023-11-23 00:59:51 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\commerce\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\commerce\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'commerce', 3306, '', 0)
+#1 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\commerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\commerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\commerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\commerce\app\Controllers\FrontEnd.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\commerce\system\CodeIgniter.php(942): App\Controllers\FrontEnd->home()
+#8 C:\xampp\htdocs\commerce\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontEnd))
+#9 C:\xampp\htdocs\commerce\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\commerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\commerce\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\commerce\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\commerce\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\commerce\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\commerce\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\commerce\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\commerce\app\Controllers\FrontEnd.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\commerce\system\CodeIgniter.php(942): App\Controllers\FrontEnd->home()
+#7 C:\xampp\htdocs\commerce\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontEnd))
+#8 C:\xampp\htdocs\commerce\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\commerce\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\commerce\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-23 00:59:51 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\FrontEnd.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FrontEnd->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontEnd))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-23 01:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-23 01:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-23 01:02:11 --> Array to string conversion
+in APPPATH\Controllers\Pemesanan.php on line 21.
+ 1 APPPATH\Controllers\Pemesanan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-23 01:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-23 01:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-23 01:28:52 --> Undefined index: status_code
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 25.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status_code', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(41): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-23 01:38:07 --> Undefined index: subtotal
+in APPPATH\Controllers\Pemesanan.php on line 39.
+ 1 APPPATH\Controllers\Pemesanan.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: subtotal', 'C:\\xampp\\htdocs\\commerce\\app\\Controllers\\Pemesanan.php', 39, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-23 01:38:31 --> Undefined variable: raw_pemesanan
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 18.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: raw_pemesanan', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(46): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-23 01:38:58 --> Illegal string offset 'order_id'
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 20.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'order_id\'', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 20, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(46): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-11-23 01:40:09 --> Undefined variable: title
+in APPPATH\Views\BackOffice\Layout\master.php on line 7.
+ 1 APPPATH\Views\BackOffice\Layout\master.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\Layout\\master.php', 7, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\Layout\\master.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('BackOffice/Layout/master', [], true)
+ 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 6 APPPATH\Controllers\Pemesanan.php(46): view('BackOffice/page/Pemesanan', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-23 01:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-23 02:02:23 --> Undefined variable: raw_pemesanan
+in APPPATH\Views\BackOffice\page\Pemesanan.php on line 18.
+ 1 APPPATH\Views\BackOffice\page\Pemesanan.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: raw_pemesanan', 'C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\commerce\\app\\Views\\BackOffice\\page\\Pemesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('BackOffice/page/Pemesanan', [], true)
+ 5 APPPATH\Controllers\Pemesanan.php(45): view('BackOffice/page/Pemesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\pemesanan->home()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\pemesanan))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-11-23 02:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-23 02:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-23 02:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-23 02:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-23 02:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-23 02:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-23 02:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-23 02:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

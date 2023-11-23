@@ -4,7 +4,7 @@
 
 <div class=" container-md bg-secondary-subtle mt-3 mb-5 p-5 border border-3 border-dark-subtle">
 
-    <a href="/" class="btn text-light mb-3" style="background-color: #190482;"><i class="fa-solid fa-arrow-left"></i></a>
+    <a href="/keranjang" class="btn text-light mb-3" style="background-color: #190482;"><i class="fa-solid fa-arrow-left"></i></a>
     <div class="row my-4 ">
         <div class="col-12 col-md-4 border border-3 border-dark-subtle p-2" style="max-height: 150px;">
             <table class="table table-secondary ">
@@ -51,7 +51,7 @@
                     Sub Total : <?= "Rp " . number_format($sub_total, 2, ',', '.'); ?>
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end ">
-                    <a href="https://app.sandbox.midtrans.com/snap/v2/vtweb/<?= $token; ?>" id="tombol" class="btn text-light col-3 ">Bayar <i class="fa-solid fa-angles-right"></i></a>
+                    <a href="https://app.sandbox.midtrans.com/snap/v2/vtweb/<?= $token; ?>" target="blank" id="tombol" class="btn text-light col-3 ">Bayar <i class="fa-solid fa-angles-right"></i></a>
                     <button class="btn btn-success" type="button">Pay with PayPal <i class="fa-solid fa-angles-right"></i></button>
                 </div>
             </div>
